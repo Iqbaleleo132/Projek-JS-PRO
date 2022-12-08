@@ -1,3 +1,34 @@
+<?php 
+session_start();
+require '../admin/functions.php';
+
+if(isset($_POST["kirim"])){
+    if(daftarAkun($_POST) > 0){
+        echo "
+        <script type='text/javascript'>
+            alert('Data user berhasil ditambahkan');
+            window.location = 'user.php';
+        </script>
+    ";
+    }else{
+        echo "
+        <script type='text/javascript'>
+            alert('Data user gagal ditambahkan');
+            window.location = 'user.php';
+        </script>
+    ";
+    }
+}
+
+?>
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,8 +85,8 @@
     </div>
 
     <form action="process.php">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="Password">
+      <input type="text" id="login" class="fadeIn second" name="username" placeholder="Username">
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="Password">
       <input type="submit" class="fadeIn fourth" value="Register">
     </form>
 

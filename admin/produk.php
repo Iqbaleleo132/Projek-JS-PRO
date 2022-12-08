@@ -11,7 +11,7 @@ require 'functions.php';
 //     ";
 // }
 
-$user = query("SELECT * FROM ");
+$user = query("SELECT * FROM produk ");
 
 require '../layout/sidebar.php';
 
@@ -19,9 +19,9 @@ require '../layout/sidebar.php';
 
 
 <div class="main">
-   <h3>data user</h3>
+   <h3>Data Produk</h3>
 
-   <a href="tambah_user.php" class="tambah">tambah user</a>
+   <a href="tambahproduk.php" class="tambah">tambah produk</a>
    <table>
     <tr>
         <th>No</th>
@@ -35,14 +35,14 @@ require '../layout/sidebar.php';
    <?php $i = 1; ?>
    <?php foreach($user as $data) :?>
     <tr>
-    <td><?= $data['id_produk']; ?></td>
+    <td><?= $i; ?></td>
                 <td><?= $data['nama_produk']; ?></td>
+                <td><?= $data['stock']; ?></td>
                 <td><img src="<?= $data['foto']; ?>" alt="" width="80px"></td>
-                <td><?= $data['stok']; ?></td>
                 <td><?= $data['deskripsi']; ?></td>
                 <td>
-                <a href="">Edit</a>
-                <a href="hapusproduk.php?id=<?= $data["nama_produk"]; ?>" onClick="return confirm('Anda yakin data ingin dihapus?')">Hapus</a>
+                <a href="" class="edit">Edit</a>
+                <a href="hapusproduk.php?id=<?= $data["nama_produk"]; ?>" onClick="return confirm('Anda yakin data ingin dihapus?')" class="hapus">Hapus</a>
             </td> 
     </tr>
 

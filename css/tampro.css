@@ -1,0 +1,21 @@
+@media screen and (min-width:994px) {
+.form-control{
+    width: 350px;
+}
+}
+
+/* Style Kaetgoti */
+.img-categorie{
+    width: 50px;
+}
+.img-categorie:hover{
+    transform: scale(1.2);
+    transition: 0,2s;
+}
+
+.row-container{
+    background-color: white;
+    margin: 0px;
+    
+}
+

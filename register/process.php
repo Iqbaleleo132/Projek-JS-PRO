@@ -2,10 +2,10 @@
 
 require '../koneksi.php';
 
-$nama_lengkap = $_POST["nama_lengkap"];
+$username = $_POST["username"];
 $password = $_POST["password"];
 
-$query = mysqli_query($conn, "INSERT INTO user VALUES = '$nama_lengkap' AND password = '$password'");
+$query = mysqli_query($conn, "INSERT INTO user VALUES('$username','$password');");
 
 $cek = mysqli_num_rows($query);
 
@@ -15,13 +15,13 @@ if($cek > 0){
     if($data["roles"] == "admin"){
         session_start();
 
-        $_SESSION["nama_lengkap"] = $data["nama_lengkap"];
+        $_SESSION["username"] = $data["username"];
         $_SESSION["password"] = $data["password"];
         header("Location: ");
     }else if($data["password"] == "costumer"){ 
         session_start();
 
-        $_SESSION["nama_lengkap"] = $data["nama_lengkap"];
+        $_SESSION["username"] = $data["username"];
         $_SESSION["password"] = $data["password"];
 
         header("Location: JS PRO\index.php");

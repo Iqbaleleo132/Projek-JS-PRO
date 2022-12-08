@@ -19,7 +19,7 @@ require '../layout/sidebar.php';
 
 
 <div class="main">
-   <h3>data user</h3>
+   <h3>Data User</h3>
 
    <a href="tambah_user.php" class="tambah">tambah user</a>
    <table>

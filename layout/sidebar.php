@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Printer Berkualitas</title>
+    <title>admin js pro</title>
     <link rel="stylesheet" href="../css/admin.css">
     <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800|Playfair+Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
      <!-- Box Icons -->
@@ -21,7 +21,7 @@
         <div class="icons-home">
         <a href="index.php"><i class='bx bxs-dashboard'> Overview</i></a>
         <a href="user.php"><i class='bx bxs-user'> Costumer</i></a>
-        <a href="#"><i class='bx bx-dots-vertical-rounded'> Options</i></a>
+        <a href="../admin/produk.php"><i class='bx bx-dots-vertical-rounded'> Produk</i></a>
         <a href="../logout.php"><i class='bx bx-log-in-circle'> Logout</i></a>  
         </div>
     </div>
